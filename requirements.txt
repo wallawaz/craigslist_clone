@@ -1,0 +1,7 @@
+django
+`django-admin startproject <appnname>`
+`django-admin startapp `<applabel>`
+
+# after adding adding/editing models ...
+`python manage.py makemigrations`
+`python manage.py migrate`
