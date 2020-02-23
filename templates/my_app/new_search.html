@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+    <h2 style="text-align: center;">{{ search | title }} </h2>
+    <div class="row">
+        {% for posting in postings %}
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <a href="{{ posting.url }}"><img src="{{ posting.image_url }}" alt=""></a>
+                </div>
+                <div class="card-content">
+                    <p>{{ posting.title }} </p>
+                </div>
+                <div class="card-action">
+                    <a href="{{ posting.url }}">View Listing: Price {{ posting.price | floatformat:2|intcomma }} </a>
+                </div>            
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

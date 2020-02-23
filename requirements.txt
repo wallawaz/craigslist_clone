@@ -1,4 +1,6 @@
+bs4
 django
+requests
 `django-admin startproject <appnname>`
 `django-admin startapp `<applabel>`
 

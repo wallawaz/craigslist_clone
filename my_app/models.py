@@ -10,3 +10,13 @@ class Search(models.Model):
 
     class Meta:
         verbose_name_plural = "searches"
+
+class Posting:
+    """
+    Simple class to contain Craigslist post data.
+    """
+    def __init__(self, url, title, image_url, price=None):
+        self.url = url
+        self.title = title
+        self.image_url = image_url
+        self.price = price 
